@@ -1,0 +1,32 @@
+{
+  "name": "@lyricshare/utils",
+  "version": "0.1.0",
+  "private": true,
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./audio": {
+      "import": "./dist/audio/index.mjs",
+      "require": "./dist/audio/index.js",
+      "types": "./dist/audio/index.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "tsup src/index.ts src/audio/index.ts --format esm,cjs --dts --clean",
+    "dev": "tsup src/index.ts src/audio/index.ts --format esm,cjs --dts --watch",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint src/",
+    "clean": "rm -rf dist"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "tsup": "^8.2.0",
+    "typescript": "^5.5.0"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "name": "@lyricshare/api",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "cargo watch -x run",
+    "build": "cargo build --release",
+    "start": "cargo run --release",
+    "lint": "cargo clippy",
+    "test": "cargo test",
+    "clean": "cargo clean"
+  }
+}

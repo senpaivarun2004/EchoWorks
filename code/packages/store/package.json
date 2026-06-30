@@ -1,0 +1,31 @@
+{
+  "name": "@lyricshare/store",
+  "version": "0.1.0",
+  "private": true,
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "tsup src/index.ts --format esm,cjs --dts --clean --external react --external zustand",
+    "dev": "tsup src/index.ts --format esm,cjs --dts --watch --external react --external zustand",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint src/",
+    "clean": "rm -rf dist"
+  },
+  "dependencies": {
+    "@lyricshare/types": "workspace:*",
+    "zustand": "^4.5.0",
+    "immer": "^10.1.0"
+  },
+  "devDependencies": {
+    "tsup": "^8.2.0",
+    "typescript": "^5.5.0"
+  }
+}

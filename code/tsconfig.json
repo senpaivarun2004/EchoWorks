@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "jsx": "react-jsx",
+    "strict": true,
+    "skipLibCheck": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "baseUrl": ".",
+    "paths": {
+      "@lyricshare/*": ["packages/*/src"],
+      "@lyricshare/types": ["packages/types/src"],
+      "@lyricshare/ui": ["packages/ui/src"],
+      "@lyricshare/core": ["packages/core/src"],
+      "@lyricshare/api-client": ["packages/api-client/src"],
+      "@lyricshare/store": ["packages/store/src"],
+      "@lyricshare/utils": ["packages/utils/src"]
+    }
+  },
+  "exclude": ["node_modules", "dist", "build", ".next", ".turbo"]
+}
